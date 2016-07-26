@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8 -- Calculator</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+    <!--1.	Notice the markup that I’ve included for you in the web page. There is a text box that will display the value of each button click and 16 different buttons each of which represents a major key on a basic calculator. Begin by referencing the jQuery library and then immediately wire up the jQuery .ready() function.  -->
+    
+    <!--2.	This first part will require you to stylize all of the buttons programmatically. 
+    -Using jQuery make each button the same width and height
+    -give each button a unique 
+        -background color
+        -border style
+        -width
+        -color. 
+    Also, give the display a unique background color,
+    -set the font color and size,
+    -and set a unique border style, width, and color.-->
+    
+    <!--3.	Reference the “bubble capture” code from assignment 6. Rewrite this code so that it uses jQuery events and makes use of jQuery DOM manipulation techniques to set the display based on button selections made.-->
+    
+    <input type="text" readonly id="result">
+    <br>
+    <div id="container">
+        <input type="button" id="seven" value="7">
+        <input type="button" id="eight" value="8">
+        <input type="button" id="nine" value="9">
+        <input type="button" id="divide" value="/">
+        <br>
+        <input type="button" id="four" value="4">
+        <input type="button" id="five" value="5">
+        <input type="button" id="six" value="6">
+        <input type="button" id="multiply" value="*">
+        <br>
+        <input type="button" id="one" value="1">
+        <input type="button" id="two" value="2">
+        <input type="button" id="three" value="3">
+        <input type="button" id="subtract" value="-">
+        <br>
+        <input type="button" id="zero" value="0">
+        <input type="button" id="period" value=".">
+        <input type="button" id="add" value="+">
+    </div>
+    <input type="button" id="equal" value="=">
+    
+    <script>
+        $('document').ready(function() {
+            $('input[type=button]').css('width', '85px');
+            $('input[type=button]').css('height', '52px');
+            
+            $('#zero').css('background-color', '#d299a4');
+            
+            $('#one').css('background-color', '#6ea8a9');
+            $('#one').css('color', '#ffffff');
+            $('#one').css('border', 'solid 1px gold');
+            
+            $('#two').css('background-color', '#f4d984');
+            $('#two').css('border', 'dashed 1px #619681');
+            
+            $('#three').css('background-color', '#40e0d0');
+            
+            $('#four').css('background-color', '#d6c7d2');
+            $('#four').css('color', '#717bff');
+            
+            $('#five').css('background-color', '#95c200');
+            $('#five').css('border', 'solid 1px #fd9e81');
+            $('#five').css('color', '#bf4393');
+                
+            $('#six').css('background-color', '#4b68b3');
+            $('#six').css('color', '#ffffff');
+            
+            $('#seven').css('background-color', '#fd9e81');
+            $('#seven').css('border', 'solid 1px #62d68d');
+            $('#seven').css('color', '#941a1a');
+            
+            $('#eight').css('background-color', '#b0e0e6');
+            $('#eight').css('border', 'solid 2px #d299a4');
+            
+            $('#nine').css('background-color', '#fff68f');
+            $('#nine').css('border', 'dotted 2px #6ea8a9');
+            
+            $('#period').css('background-color', '#717bff');
+            $('#period').css('color', '#ffffff');
+            
+            $('#divide').css('background-color', '#eec8c8');
+            $('#divide').css('border', 'solid 2px #8ab2ea');
+            
+            $('#multiply').css('background-color', '#619681');
+            $('#multiply').css('color', '#b0e0e6');
+            
+            $('#subtract').css('background-color', '#8ab2ea');
+            $('#subtract').css('border', 'dotted 1px #fff68f');
+            
+            $('#add').css('background-color', '#62d68d');
+            
+            $('#equal').css('background-color', '#bf4393');
+            $('#equal').css('border', 'dashed 1px #717bff');
+            $('#equal').css('color', 'yellow');
+            
+            $('#result').css('background-color', '#e6f0f2');
+            $('#result').css('width', '350px');
+            $('#result').css('height', '40px');
+            $('#result').css('font-family', 'Tahoma');
+            //$('#result').css('font-size', '1.15em');
+            $('#result').css('color', 'black');
+            
+            
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

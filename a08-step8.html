@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8 -- Part 1, Step 8</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <style type="text/css">
+        div {
+            background-color: azure;
+            min-height: 100px;
+            max-width:200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--8.	Create a div tag within the web page. As the user resizes the browser, display the width and height of the browser window within the div tag. -->
+    <div>Current width of window: <div id="theDiv"></div></div>
+    
+    <script>
+        $('document').ready(function() {
+            $(window).resize(function() {
+                $("#theDiv").text($(window).width());
+            });
+        });
+    
+    </script>
+    
+    
+    
+</body>
+</html>

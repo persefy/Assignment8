@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8 -- Part 1, Step 6</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <style type="text/css">
+        div {
+            background-color: #ccc;
+        }
+        span {
+            background-color: lawngreen;
+        }
+    
+    </style>
+</head>
+<body>
+    <!--6.	Rewrite the code from number 5. This time add a span tag to the web page. Display three different messages within the span tag when the user enters the div, leaves the div, or clicks on the div. -->
+    <div>Here's div</div>
+    <span>--></span>
+    
+    <script>
+        $('document').ready(function() {
+            $('div').css('width', '400px');
+            $('div').css('height', '400px');
+            
+            $('div').on('click', function(event){
+                $('span').text('The div has been clicked');
+            });
+            $('div').on('mouseenter', function(event){
+                $('span').text('The mouse has entered the div');
+            });
+            $('div').on('mouseleave', function(event){
+                $('span').text('The mouse has left the div');
+            });
+        });
+    
+    </script>
+</body>
+</html>

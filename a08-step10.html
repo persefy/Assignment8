@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8 -- Part 1, Step 10</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+    <!--10.	Add a form tag within a web page complete with 2 input fields: one that collects name and a second that collects an email. Add a submit button. When the user submits the form, if any one of the two fields is left empty, display an alert box to the user indicating that the fields are required. Give the field that the user left empty a red border. If both fields have values in them, set their borders to green. -->
+    <form action="#">
+        Name <input type="text" id="txt"/>
+        Email <input type="text" id="email"/>
+        
+        <input type="submit" value="Submit" />
+    </form>
+    
+    <script>
+        $('document').ready(function() {
+            $('input[type=submit]').click(function() {
+                if(!$('#txt').val()) {
+                    if(!$('#email').val()) {
+                        $('#email, #txt').css('border', 'solid 1px red');
+                        window.alert('Please fill out both entries');
+                    } else if(!$('#txt').val()) {
+                        $('#txt').css('border', 'solid 1px red');
+                        window.alert('Please fill out both entries');
+                        $('#email').css('border', 'solid 1px black');
+                    }
+                } else if(!$('#email').val()) {
+                    if(!$('#txt').val()) {
+                        $('#email, #txt').css('border', 'solid 1px red');
+                        window.alert('Please fill out both entries');
+                    } else if(!$('#email').val()) {
+                        $('#email').css('border', 'solid 1px red');
+                        window.alert('Please fill out both entries');
+                        $('#txt').css('border', 'solid 1px black');
+                    }
+                } else {
+                    $('#email, #txt').css('border', 'solid 1px #5ae105');
+                }
+            });
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

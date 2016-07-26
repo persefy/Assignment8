@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8 -- Part 1, Step 5</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <style type="text/css">
+        div {
+            background-color: #ccc;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <!--5.	Create a div on a web page. Use jQuery to set the div element to 400px wide and 400px high. Attach the click, mouseenter, and mouseleave events using the .on() method. Display an alert message to the user indicating that the div was either clicked on, the mouse entered it, or the mouse left it. -->
+    <div>Here's div</div>
+    
+    <script>
+        $('document').ready(function() {
+            $('div').css('width', '400px');
+            $('div').css('height', '400px');
+            $('div').on('click', function(event){
+                window.alert('The div\'s been clicked');
+            });
+            $('div').on('mouseenter', function(event){
+                window.alert('Mouse has entered');
+            });
+            $('div').on('mouseleave', function(event){
+                window.alert('Mouse has left');
+            });
+        });
+    
+    </script>
+</body>
+</html>

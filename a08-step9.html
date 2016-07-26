@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8 -- Part 1, Step 9</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+    <!--9.	Create a text field using the <input> tag. When the input has focus, set the background to a light gray color. When the input does not have focus, reset the background back to a white color. -->
+    <input type="text" />
+    
+    <script>
+        $('document').ready(function() {
+            $('input').focusin(function(event) {
+              $('input').css('background-color', '#eaeaea');
+            });
+            $('input').focusout(function(event) {
+              $('input').css('background-color', '#ffffff');
+            });
+        });
+    </script>
+    
+    
+    
+</body>
+</html>

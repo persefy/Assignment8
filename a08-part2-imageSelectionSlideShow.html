@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8 -- Part 2, Step 1</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <style type="text/css">
+        h1 {
+            text-align: center;
+        }
+        img {
+            max-width: 600px;
+            height: auto;
+        }
+        #mainContent {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ccc;
+            height: 400px;
+            position: relative;
+            padding: 1em;
+        }
+        li {
+            display: inline-block;
+        }
+        ul {
+            display: block;
+            background-color: aliceblue;
+            position: absolute;
+            bottom: 0;
+            max-width: 100%;
+        }
+        input {
+            background-color: aliceblue;
+            color: brown;
+            border: none;
+        }
+        
+    </style>
+</head>
+<body>
+<h1>Image Selection Slideshow </h1>
+    <!--
+1.	The slideshow must have a minimum of 5 images.
+2.	Add a numeric paging widget underneath the images. Make sure to stylize them using jQuery so that the selected image is clearly differentiated from the non-selected images. 
+3.	Only one image will fade into view at a time. Depending on the number selected in the paging widget, the image that represents that number should fade into view. Make sure to take advantage of jQuery effects for this fade into view.
+-->
+    <div id="mainContent">
+        <img src="images/pic1.jpg" alt="slide image 1" id="slideImg1" id="img1" class="hidden" />
+        <img src="images/pic2.jpg" alt="slide image 2" id="slideImg1" id="img2" class="hidden" />
+        <img src="images/pic3.jpg" alt="slide image 3" id="slideImg1" id="img3" class="hidden" />
+        <img src="images/pic4.jpg" alt="slide image 4" id="slideImg1" id="img4" class="hidden" />
+        <img src="images/pic5.jpg" alt="slide image 5" id="slideImg1" id="img5" class="hidden" />
+        <ul>
+            <li>
+                <input type="button" id="1st" value="01" />
+                <input type="button" id="2nd" value="02" />
+                <input type="button" id="3rd" value="03" />
+                <input type="button" id="4th" value="04" />
+                <input type="button" id="5th" value="05" />
+            </li>
+        </ul>
+        
+    </div>
+    
+    <script>
+        $('document').ready(function() {
+            
+            $('#1st').click(function() {
+                $('#img1').addClass('.shown').removeClass('.hidden');;
+                $('#img2').removeClass('shown').addClass('hidden');
+                $('#img3').removeClass('shown').addClass('hidden');
+                $('#img4').removeClass('shown').addClass('hidden');
+                $('#img5').removeClass('shown').addClass('hidden');
+            });
+            $('#2nd').click(function() {
+                $('#img1').removeClass('shown').addClass('hidden');
+                $('#img2').addClass('shown').removeClass('hidden');
+                $('#img3').removeClass('shown').addClass('hidden');
+                $('#img4').removeClass('shown').addClass('hidden');
+                $('#img5').removeClass('shown').addClass('hidden');
+            });
+             $('.hidden').css('opacity', '0');
+            $('.shown').css('opacity', '1.0');
+            
+            //$('.selected').css('color', 'red');
+            
+        });
+    </script>
+    
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8 -- Tabbed Menu Bar</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <style type="text/css">
+        h2 {
+            margin: 0;
+            padding: .3em;
+        }
+        ul {
+            background-color: #069;
+            max-width: 600px;
+            border: none;
+            margin-bottom: 0;
+        }
+        li {
+            list-style-type: none;
+            display: inline-block;
+            padding: .1em;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            padding: .75em;
+            background-color: #fff;
+            margin: .15em .5em 0;
+            border-radius: 15% 15% 0 0;
+            width: 100px;
+        }
+        #main {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: Verdana, Tahoma, sans-serif;
+        }
+        #box {
+            max-width: 600px;
+            border: solid 1px #000;
+            padding: 0 1em 1em;
+        }
+        #tab1 {
+            background-color: coral;
+        }
+        #tab2 {
+            background-color: #839d57;
+        }
+        #tab3 {
+            background-color: #c8a2c8;
+        }
+        #content1 {
+            background-color: #fdb59c;
+        }
+        #content2 {
+            background-color: #cce5a2;
+        }
+        #content3 {
+            background-color: #f4cdf4;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <h1>jQuery Tabbed Menu Bar </h1>
+    <!--
+1.	The tabbed menu must have a minimum of 3 tabs with 3 associated panels.
+2.	Each tab should show its respective panel when clicked. Add CSS styling to your tab menu, tabs, and panels so that it’s aesthetically pleasing.
+-->
+    
+        <ul>
+            <li><a href="#" id="tab1">Tab 1</a></li>
+            <li><a href="#" id="tab2">Tab 2</a></li>
+            <li><a href="#" id="tab3">Tab 3</a></li>
+        </ul>
+        <div id="box">
+            <div id="content1">
+                <h2>Here's Tab 1's Content</h2>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas urna turpis, vehicula vel pharetra vel, porta eu mi. Cras mi nunc, varius et sodales ut, scelerisque ut lacus. Fusce fermentum nunc et turpis tempor, eu pulvinar sem faucibus. Donec pellentesque arcu consequat ante sodales aliquam. Suspendisse nec felis vel tellus faucibus volutpat et sit amet turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent ex ipsum, aliquet quis cursus ut, accumsan vitae ante. Suspendisse faucibus quam ipsum, vel vehicula massa pharetra at.
+                Nunc ut accumsan augue, a aliquam elit. Phasellus placerat sem diam, auctor condimentum odio aliquet eu. Sed pharetra est et turpis varius egestas. Quisque rutrum et dolor aliquam dignissim. Phasellus a ullamcorper ipsum, eu feugiat nulla. Duis egestas diam et porttitor aliquet. Quisque condimentum arcu nec laoreet luctus. Donec rutrum, ipsum non elementum tincidunt, dui diam sagittis tellus, quis pellentesque quam est sed turpis. Sed in ornare sapien, nec facilisis est.
+            </div>
+            <div id="content2">
+                <h2>Here's Tab 2's Content</h2>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas urna turpis, vehicula vel pharetra vel, porta eu mi. Cras mi nunc, varius et sodales ut, scelerisque ut lacus. Fusce fermentum nunc et turpis tempor, eu pulvinar sem faucibus. Donec pellentesque arcu consequat ante sodales aliquam. Suspendisse nec felis vel tellus faucibus volutpat et sit amet turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent ex ipsum, aliquet quis cursus ut, accumsan vitae ante. Suspendisse faucibus quam ipsum, vel vehicula massa pharetra at.
+                Nunc ut accumsan augue, a aliquam elit. Phasellus placerat sem diam, auctor condimentum odio aliquet eu. Sed pharetra est et turpis varius egestas. Quisque rutrum et dolor aliquam dignissim. Phasellus a ullamcorper ipsum, eu feugiat nulla. Duis egestas diam et porttitor aliquet. Quisque condimentum arcu nec laoreet luctus. Donec rutrum, ipsum non elementum tincidunt, dui diam sagittis tellus, quis pellentesque quam est sed turpis. Sed in ornare sapien, nec facilisis est.
+            </div>
+            <div id="content3">
+                <h2>Here's Tab 3's Content</h2>
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas urna turpis, vehicula vel pharetra vel, porta eu mi. Cras mi nunc, varius et sodales ut, scelerisque ut lacus. Fusce fermentum nunc et turpis tempor, eu pulvinar sem faucibus. Donec pellentesque arcu consequat ante sodales aliquam. Suspendisse nec felis vel tellus faucibus volutpat et sit amet turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent ex ipsum, aliquet quis cursus ut, accumsan vitae ante. Suspendisse faucibus quam ipsum, vel vehicula massa pharetra at.
+                Nunc ut accumsan augue, a aliquam elit. Phasellus placerat sem diam, auctor condimentum odio aliquet eu. Sed pharetra est et turpis varius egestas. Quisque rutrum et dolor aliquam dignissim. Phasellus a ullamcorper ipsum, eu feugiat nulla. Duis egestas diam et porttitor aliquet. Quisque condimentum arcu nec laoreet luctus. Donec rutrum, ipsum non elementum tincidunt, dui diam sagittis tellus, quis pellentesque quam est sed turpis. Sed in ornare sapien, nec facilisis est.
+            </div>
+        </div>
+    </div>
+    <script>
+        $('document').ready(function() {
+            $('#content2, #content3').hide();
+            
+            $('#tab1').click(function() {
+                event.preventDefault();
+                $('#content1').show('3000');
+                $('#content2').hide();
+                $('#content3').hide();
+            });
+            $('#tab2').click(function() {
+                event.preventDefault();
+                $('#content1').hide();
+                $('#content2').show('3000');
+                $('#content3').hide();
+            });
+            $('#tab3').click(function() {
+                event.preventDefault();
+                $('#content1').hide();
+                $('#content2').hide();
+                $('#content3').show('3000');
+            });    
+        });
+    </script>
+    
+</body>
+</html>

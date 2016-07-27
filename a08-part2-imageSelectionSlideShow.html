@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Assignment 8 -- Part 2, Step 1</title>
+    <title>Assignment 8 -- SlideShow</title>
     <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
     <style type="text/css">
         h1 {
@@ -65,9 +65,8 @@
     
     <script>
         $('document').ready(function() {
-            
             $('#1st').click(function() {
-                $('#img1').addClass('.shown').removeClass('.hidden');;
+                $('#img1').addClass('shown').removeClass('hidden');
                 $('#img2').removeClass('shown').addClass('hidden');
                 $('#img3').removeClass('shown').addClass('hidden');
                 $('#img4').removeClass('shown').addClass('hidden');
@@ -80,8 +79,8 @@
                 $('#img4').removeClass('shown').addClass('hidden');
                 $('#img5').removeClass('shown').addClass('hidden');
             });
-             $('.hidden').css('opacity', '0');
-            $('.shown').css('opacity', '1.0');
+            $('.hidden').css('opacity', '0');
+            $('.shown').css('opacity', '1');
             
             //$('.selected').css('color', 'red');
             

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8 -- Accordion</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <script src="https://use.fontawesome.com/dd758d23f2.js"></script>
+    <style type="text/css">
+        body {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: Tahoma, sans-serif;
+        }
+        h1 {
+            text-align: left;
+            font-size: 1em;
+            color: #A68BBB;
+        }
+        h2 {
+            margin: 0;
+            padding: 1em;
+            background-color: #fff;
+            color: #146294;
+            border-top: solid 1px #2339DF;
+        }
+        h3 {
+            background-color: #747773;
+            margin: 0;
+            padding: .5em;
+            border-top: solid 1px #ccc;
+            color: #fff;
+        }
+        #container {
+            background-color: #fff;
+            border-right: solid 1px #2339DF;
+            border-left: solid 1px #2339DF;
+            max-width: 700px;
+            
+        }
+        #container p {
+            padding: 1em;
+            margin: 0;
+        }
+        .selected {
+            background-color: #66FC29;
+            color: #000;
+            border-radius: 10% 10% 0 0;
+        }
+        div div {
+            background-color: #EEEEEE;
+        }
+        
+    </style>
+</head>
+<body>
+<h1>jQuery Accordion</h1>
+    <!--
+1.	The accordion must have a minimum of 3 headings and associated panels for each heading.
+2.	Next to the text for each heading should be a plus icon. You can use an actual icon image or just use text if you prefer. When an accordion panel is open, the icon should change just as it does in the image below. The heading style should also change including shape and color as it does in the image below.
+3.	The panels should animate into view when their respective headings are clicked. 
+-->
+    <div id="container">
+        <h2>Accordion Here</h2>
+        <div id="panel1">
+                <h3>What is an Accordion? <span class="changeIcon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non magna eget mi volutpat facilisis. Proin gravida viverra mi. Proin tincidunt ipsum eu hendrerit elementum. Praesent sit amet metus mi. Etiam sit amet aliquam libero. Aliquam sed tellus ultricies ante faucibus egestas. Etiam molestie ipsum nibh, id pulvinar ipsum convallis nec. Nam dignissim et lacus sit amet viverra.</p>
+            </div>
+            <div id="panel2">
+                <h3>Background of an Accordion <span class="changeIcon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non magna eget mi volutpat facilisis. Proin gravida viverra mi. Proin tincidunt ipsum eu hendrerit elementum. Praesent sit amet metus mi. Etiam sit amet aliquam libero. Aliquam sed tellus ultricies ante faucibus egestas. Etiam molestie ipsum nibh, id pulvinar ipsum convallis nec. Nam dignissim et lacus sit amet viverra.</p>
+           </div>
+            <div id="panel3">
+                <h3>The Symbolic Aspect <span class="changeIcon"><i class="fa fa-plus-circle" aria-hidden="true"></i></span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non magna eget mi volutpat facilisis. Proin gravida viverra mi. Proin tincidunt ipsum eu hendrerit elementum. Praesent sit amet metus mi. Etiam sit amet aliquam libero. Aliquam sed tellus ultricies ante faucibus egestas. Etiam molestie ipsum nibh, id pulvinar ipsum convallis nec. Nam dignissim et lacus sit amet viverra.</p>
+            </div>
+       </div>
+   
+   
+    <script>
+        $('document').ready(function() {
+            $('#panel2 p, #panel3 p').hide();
+            $('#panel1 h3').addClass('selected');
+            
+            $('#panel1 h3').click(function() {
+                $('#panel1 p').slideDown('slow');
+                $('#panel2 p').hide();
+                $('#panel3 p').hide();
+                
+                $('#panel1 h3 span.changeIcon').html('<i class="fa fa-minus-circle" aria-hidden="true"></i>');
+                
+                $('#panel2 h3 span.changeIcon').html('<i class="fa fa-plus-circle" aria-hidden="true"></i>');
+                
+                $('#panel3 h3 span.changeIcon').html('<i class="fa fa-plus-circle" aria-hidden="true"></i>');
+                
+                $('#panel1 h3').addClass('selected');
+                $('#panel2 h3').removeClass('selected');
+                $('#panel3 h3').removeClass('selected');
+                
+            });
+            $('#panel2 h3').click(function() {
+                $('#panel1 p').hide();
+                $('#panel2 p').slideDown('slow');
+                $('#panel3 p').hide();
+                
+                $('#panel1 h3 span.changeIcon').html('<i class="fa fa-plus-circle" aria-hidden="true"></i>');
+                
+                $('#panel2 h3 span.changeIcon').html('<i class="fa fa-minus-circle" aria-hidden="true"></i>');
+                
+                $('#panel3 h3 span.changeIcon').html('<i class="fa fa-plus-circle" aria-hidden="true"></i>');
+                
+                $('#panel1 h3').removeClass('selected');
+                $('#panel2 h3').addClass('selected');
+                $('#panel3 h3').removeClass('selected');
+            });
+            $('#panel3 h3').click(function() {
+                $('#panel1 p').hide();
+                $('#panel2 p').hide();
+                $('#panel3 p').slideDown('slow');
+                
+                $('#panel1 h3 span.changeIcon').html('<i class="fa fa-plus-circle" aria-hidden="true"></i>');
+                
+                $('#panel2 h3 span.changeIcon').html('<i class="fa fa-plus-circle" aria-hidden="true"></i>');
+                
+                $('#panel3 h3 span.changeIcon').html('<i class="fa fa-minus-circle" aria-hidden="true"></i>');
+                
+                $('#panel1 h3').removeClass('selected');
+                $('#panel2 h3').removeClass('selected');
+                $('#panel3 h3').addClass('selected');
+            });
+        });
+    </script>
+    
+</body>
+</html>
